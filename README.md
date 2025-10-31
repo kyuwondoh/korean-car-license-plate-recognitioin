@@ -90,7 +90,7 @@ It is designed as a complete **end-to-end** system.
 ---
 
 ## 📸 시연 예시 | Demo Example
-![Demo Image](./hg.jpg)
+![Demo Image](https://raw.githubusercontent.com/kyuwondoh/korean-car-license-plate-recognition/hg.jpg)
 
 ---
 
