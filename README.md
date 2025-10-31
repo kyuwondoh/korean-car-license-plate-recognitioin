@@ -12,9 +12,7 @@
 이 웹 애플리케이션은 **한국 차량 번호판을 자동으로 인식하고 한글까지 정확히 추출하는 AI 시스템**입니다.  
 This web application is an **AI system that automatically recognizes Korean vehicle license plates and accurately extracts Hangul characters**.
 
-단순한 문자 인식(OCR)이 아니라, ➡️ **번호판 검출 → 문자 검출 → 한글 변환 → 지역명 교정**  
-➡️ **Plate Detection → Character Recognition → Hangul Conversion → Region Correction**
-
+단순한 문자 인식(OCR)이 아니라, ➡️ **번호판 검출 → 문자 검출 **  
 까지 한 번에 수행하는 **엔드 투 엔드(end-to-end)** 구조로 설계되었습니다.  
  
 It’s not just a simple OCR system, but rather an integrated process of  
@@ -29,17 +27,12 @@ It is designed as a complete **end-to-end** system.
 - 차량 이미지 속 번호판을 정확하게 탐지하고 겹치는 후보는 자동 제거합니다.  
 - Accurately detects license plates in vehicle images and removes overlapping candidates automatically.
 
-✅ **한글/숫자 문자 인식 (CTM 기반 2-Stage Ensemble)**  
-✅ **Hangul/Numeric Character Recognition (CTM-based 2-Stage Ensemble)**  
+✅ **한글/숫자 문자 인식 (2-Stage Ensemble)**  
+✅ **Hangul/Numeric Character Recognition (2-Stage Ensemble)**  
 - 문자 기울기와 배치를 고려해 회전 보정(adaptive rotation)을 수행하고,  
 - Performs adaptive rotation correction considering character tilt and layout,  
 - 두 개의 YOLO 텍스트 모델을 활용해 더 높은 인식률을 달성합니다.  
 - Uses two YOLO text models to achieve higher recognition accuracy.
-
-✅ **한국어 완전 지원**  
-✅ **Full Korean Language Support**  
-- 한글 폰트를 내장해 결과 이미지 위에 한글 텍스트가 깨지지 않고 표시됩니다.  
-- Embedded Korean fonts ensure that Hangul text is displayed correctly on images.  
 
 ✅ **다중 번호판 처리 및 슬라이드 뷰 지원**  
 ✅ **Multi-plate Processing and Slide View Support**  
@@ -62,11 +55,9 @@ It is designed as a complete **end-to-end** system.
 ## 💡 사용 방법 | How to Use
 1. 이미지를 업로드하거나 복사해 붙여넣습니다.  
    Upload or paste a vehicle image.  
-2. “🚀 인식 실행” 버튼을 클릭합니다.  
-   Click the “🚀 Run Recognition” button.  
-3. 번호판이 자동 인식되고, 한글 텍스트가 박스 위에 표시됩니다.  
+2. 번호판이 자동 인식되고, 한글 텍스트가 박스 위에 표시됩니다.  
    The plate will be automatically recognized, and Hangul text will appear above it.  
-4. “디버그 보기” 옵션을 통해 문자 검출 및 회전 과정을 자세히 볼 수 있습니다.  
+3. “디버그 보기” 옵션을 통해 문자 검출 및 회전 과정을 자세히 볼 수 있습니다.  
    Enable “Show Debug View” to visualize character detection and rotation correction.
 
 ---
@@ -90,7 +81,7 @@ It is designed as a complete **end-to-end** system.
 ---
 
 ## 📸 시연 예시 | Demo Example
-![Demo Image](https://raw.githubusercontent.com/kyuwondoh/korean-car-license-plate-recognition/hg.jpg)
+![Demo Image](hg.jpg)
 
 ---
 
